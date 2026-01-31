@@ -1,0 +1,412 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo a {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+/* Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #3498db;
+}
+
+/* Button */
+.btn-login {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: #3498db;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #2980b9;
+}
+
+/* Company Section */
+.company-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: #f9fafb;
+}
+
+.company-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Image */
+.company-image {
+    flex: 1;
+}
+
+.company-image img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Content */
+.company-content {
+    flex: 1;
+}
+
+.company-content h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.company-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 28px;
+}
+
+/* Stats */
+.company-stats {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.stat h3 {
+    font-size: 26px;
+    color: #3498db;
+    margin-bottom: 4px;
+}
+
+.stat span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Button */
+.btn-company {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-company:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .company-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .company-stats {
+        justify-content: center;
+    }
+}
+
+/* Product Section */
+.product-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.product-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+/* Product Card */
+.product-card {
+    background: #f9fafb;
+    padding: 36px 28px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon */
+.product-icon {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+/* Title */
+.product-card h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.product-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    background: #f9fafb;
+    padding: 80px 20px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Contact Content */
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #2c3e50;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #2980b9;
+}
+
+/* FOOTER */
+.footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-brand,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 14px;
+}
+
+.footer p {
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #3498db;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    color: #bdc3c7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-content {
+        flex-direction: column;
+    }
+}
